@@ -1,0 +1,2 @@
+# GetProvinceCityAreaByXMLFile
+一个简单的小例子，通过一个xml文件去实现选择省市区

@@ -1,8 +1,11 @@
-# GetProvinceCityAreaByXMLFile
-一个简单的小例子，通过一个xml文件去实现选择省市区      
+	
+一个简单的小例子，通过一个xml文件去实现选择省市区。   
+         
 关键是用了XML解析器的代理方法。具体相关代码如下：
-
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+	
+	
+	#pragma mark - xmlParseDelegateMethod
+	-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
 	    if ([elementName isEqualToString:@"province"]) {
 	        tempProvince = [attributeDict objectForKey:@"name"];
 	    }
